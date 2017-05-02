@@ -1,0 +1,81 @@
+---
+---
+
+@import 'jekyll-theme-cayman';
+
+/* ==========================================================================
+   Resets
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.page-header {
+  background: #6185A9;
+  height: 350px;
+  margin-bottom: 240px;
+
+  @include small {
+    height: auto;
+  }
+}
+
+.small {
+  color: #FFFFFF;
+  font-weight: 100;
+  font-size: 16px;
+  opacity: initial;
+}
+
+.debug-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* ==========================================================================
+   Main
+   ========================================================================== */
+
+.wrapper {
+  width: 99%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto;
+
+  @include small {
+    display: block;
+  }
+}
+
+.box-info {
+  width: 350px;
+  text-align: center;
+  display: inline-block;
+  padding: 21px 25px;
+
+  a {
+    text-decoration: underline;
+  }
+
+  @include small {
+    width: auto;
+  }
+}
+
+

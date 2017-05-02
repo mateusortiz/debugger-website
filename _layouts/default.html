@@ -1,18 +1,55 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  
-  {% include head.html %}
-
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
   <body>
-    {% include page-header.html %}
+    <section class="page-header">
+      <h1 class="project-name small">{{ site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline small">{{ site.description | default: site.github.project_tagline }}</h2>
+      <div class="debug-image">
+        <img class="view-debugger" src="{{ site.baseurl }}/assets/images/debugger.png" alt="View debugger" width="778" height="462">
+      </div>
+    </section>
 
     <section class="main-content">
-      
-      {{ content }}
 
-      {% include page-footer.html %}
+      <div class="wrapper">
+        <div class="box-info">
+          <a href="#">Community</a>
+          <p>We have a wonderful community of peers, mentors, and friendly people. Come say hi!</p>
+          <img src="assets/images/icon-slack.svg" alt="Slack">
+        </div>
+        <div class="box-info">
+          <a href="#">Hackable</a>
+          <p>We Built a Launchpad so that you can start on hacking on DevTools in under 5 minutes.</p>
+          <span>🚀</span>
+        </div>
+        <div class="box-info">
+          <a href="#">Universal</a>
+          <p>It's both a Firefox Debugger and a standalone debugger for Node, Chrome and everything else!</p>
+          <img src="assets/images/icon-js.png" width="30" height="30" alt="JS">
+        </div>
+      </div>
 
     </section>
 
+    {% if site.google_analytics %}
+      <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
   </body>
 </html>

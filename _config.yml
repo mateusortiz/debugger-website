@@ -1,18 +1,5 @@
-# Setup
-title:        debugger.html
-tagline:      The universal JS debugger 💥
-baseurl:      ""
-paginate:     1
-
-# About/contact
-author:
-  name:       Author name
-  url:        http://yourhomepage.com
-
-# Gems
-gems:
-  - jekyll-paginate
-
-#Others
-markdown: kramdown
-theme: jekyll-theme-cayman
+title: debugger.html
+description: The universal JS debugger 💥
+show_downloads: true
+google_analytics:
+theme:
